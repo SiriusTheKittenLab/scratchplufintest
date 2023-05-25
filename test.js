@@ -1,31 +1,20 @@
-class ScratchFetch {
-    constructor() {
-    }
-    
+class NitroBlock {
     getInfo() {
         return {
-            "id": "Fetch",
-            "name": "Quick Tools",
+            "id": "NitroBlock",
+            "name": "NitroBlock",
             "blocks": [
                 {
-                    "opcode": "noteBlock",
+                    "opcode": "test",
                     "blockType": "command",
-                    "text": "Note [NOTE]",
-                    "arguments": {
-                        "NOTE": {
-                            "type": "string",
-                            "defaultValue": "Enter your note"
-                        }
-                    }
+                    "text": "test"
                 }
-            ]
+            ],
+            "menus": {}
         };
     }
-
-    noteBlock({ NOTE }) {
-        // Here, you can perform any actions you want with the note, such as storing it in a variable or displaying it.
-        console.log("Note:", NOTE);
+  
+    test() {
+        // Do nothing
     }
 }
-
-Scratch.extensions.register(new ScratchFetch());
